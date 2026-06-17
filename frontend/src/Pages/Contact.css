@@ -1,0 +1,211 @@
+
+.contact-page {
+    font-family: "Poppins", "Segoe UI", sans-serif;
+    background: #f6f6fb;
+    color: #1f1f29;
+}
+
+
+.hero-section {
+    background: linear-gradient(120deg, #4c1d95 0%, #9333ea 45%, #ec1577 100%);
+    color: #fff;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+.breadcrumb-text {
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.text-gradient-pink {
+    background: linear-gradient(90deg, #ff7eb3, #ff4f9a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.hero-circle {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.hero-circle-1 {
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    right: 140px;
+}
+
+.hero-circle-2 {
+    width: 140px;
+    height: 140px;
+    bottom: -60px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.contact-body {
+    margin-top: -1px;
+}
+
+.form-card {
+    background: #fff;
+    border-radius: 14px;
+    border-left: 4px solid #7c3aed;
+    box-shadow: 0 10px 30px rgba(76, 29, 149, 0.08);
+}
+
+.form-title {
+    font-size: 1.4rem;
+    color: #1f1f29;
+}
+
+.form-subtitle {
+    color: #6b7280;
+    font-size: 0.92rem;
+}
+
+.form-label-custom {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #4b5563;
+    margin-bottom: 0.4rem;
+}
+
+.custom-input {
+    border: 1px solid #e3e3ee;
+    border-radius: 8px;
+    padding: 0.65rem 0.9rem;
+    font-size: 0.92rem;
+    background: #fafaff;
+}
+
+.custom-input:focus {
+    border-color: #9333ea;
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.12);
+    background: #fff;
+}
+
+.btn-send {
+    background: linear-gradient(90deg, #7c3aed, #ec1577);
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.btn-send:hover {
+    opacity: 0.92;
+    color: #fff;
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(31, 31, 41, 0.05);
+}
+
+.icon-box {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #7c3aed, #ec1577);
+}
+
+.info-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #9333ea;
+}
+
+.info-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #1f1f29;
+}
+
+.info-subtitle {
+    font-size: 0.8rem;
+    color: #8a8a99;
+}
+
+.social-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #f1e9ff;
+    color: #7c3aed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.floating-buttons {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 50;
+}
+
+.float-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    font-size: 1.3rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.whatsapp-btn {
+    background: #25d366;
+}
+
+.call-btn {
+    background: linear-gradient(135deg, #7c3aed, #ec1577);
+}
+
+.footer-strip {
+    height: 36px;
+    background: #1a1025;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-circle {
+        display: none;
+    }
+}

@@ -3,7 +3,7 @@ import image from "../assets/images.jpg";
 import { Link } from "react-router-dom";
 import "./Home.css";
 
-const Home = () => {
+const Home = ({name}) => {
     return (
         <div className="hero-section">
             <div className="container">
@@ -11,14 +11,12 @@ const Home = () => {
 
                     {/* Left Section */}
                     <div className="col-lg-6 text-white">
-                        <p className="fw-bold fs-5">
+                        <p className="fw-bold fs-3">Hello {name}</p>
+                        <p className="fw-bold fs-3">
                             Kurnool • Ananthapur • Hyderabad • Bangalore
                         </p>
-
                         <h1 className="display-1 fw-bold lh-1">
-                            TELUGU STATES
-                            <br />
-                            BEST
+                            TELUGU STATES BEST
                             <br />
                             <span className="highlight">EVENT</span>
                             <br />

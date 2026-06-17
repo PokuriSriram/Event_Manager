@@ -45,7 +45,7 @@ function Login() {
     }
     return (
         <main>
-            <div className="container">
+            <div className="cont">
             <div id="img">
                 <div>
                     <h1>Welcome Back</h1>
@@ -58,13 +58,13 @@ function Login() {
                 </div>
 
                 <form onSubmit={handleLogin}>
-                    <label >Phone:</label>
+                    <label className="form-label">Phone:</label>
                     <br />
-                    <input type="number" placeholder="Enter your number" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                    <input className="form-control" type="number" placeholder="Enter your number" value={phone} onChange={(e) => setPhone(e.target.value)} />
                     <br />
-                    <label >password</label>
+                    <label className="label-form">password</label>
                     <br />
-                    <input type="password" placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} />
+                    <input className="form-control"  type="password" placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} />
                     <br />
                     <div>
                         <p>
@@ -78,7 +78,6 @@ function Login() {
                     <p className="or">or</p>
 
                     <div>
-                        <h4>Don't have account..?</h4>
                         <p>
                             Don't have an account?
                             <Link to="/register">
