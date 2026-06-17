@@ -3,14 +3,8 @@ import { useState } from "react";
 import axios from "axios";
 import {Link} from 'react-router-dom';
 import Register from "./Register";
+import Home from "./Home";
 import './login.css'
-function Card({ name }) {
-    return (
-        <>
-            <h1>Hello {name} !</h1>
-        </>
-    )
-}
 
 function Login() {
     const [curUser, setCurUser] = useState(null);
@@ -44,13 +38,14 @@ function Login() {
         }
     }
     if (curUser) {
-        return <Card name={curUser} />
+        return <Home name={curUser} />
     }
     if (show) {
         return <Register />
     }
     return (
         <main>
+            <div className="container">
             <div id="img">
                 <div>
                     <h1>Welcome Back</h1>
@@ -93,6 +88,7 @@ function Login() {
                     </div>
 
                 </form>
+                </div>
             </div>
         </main>
     )

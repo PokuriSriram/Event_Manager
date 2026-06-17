@@ -1,6 +1,14 @@
 nav{
     display: flex;
-    justify-content: space-between;
-    height: 50px;
+    justify-content: space-evenly;
+    height: 70px;
     align-items: center;
+}
+.nav-logo:hover{
+    background:linear-gradient(
+        135deg,
+        #45108a 0%,
+        #7b2ff7 50%,
+        #f72585 100%
+    );
 }

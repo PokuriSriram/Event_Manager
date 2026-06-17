@@ -32,7 +32,8 @@ function Register(){
         return <Login />
     }
     return(
-        <>
+        <div>
+        <div className="container">
             <h1>Registration Form</h1>
             <form onSubmit={handleRegister}>
             <label className="form-label">Full Name:</label>
@@ -51,8 +52,9 @@ function Register(){
                 <button type="submit">Register</button>
                 
             </form>
+            </div>
             <button onClick={()=>SetLogin(!login)}>Login</button>
-        </>
+        </div>
     )
 }
 export default Register;
