@@ -1,5 +1,5 @@
-import React from 'react'
-import{BrowserRouter,Routes,Route} from'react-router-dom';
+import React, { use } from 'react'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Events from './Pages/Events';
@@ -11,27 +11,28 @@ import ProtectedRoute from './components/ProtectedRoute';
 const App = () => {
   return (
     <BrowserRouter>
-    <Routes>
-    <Route path="/" element={<Navigate to="/login" />} />
+      <Routes>
 
-<Route path="/login" element={<Login />} />
+        <Route path="/" element={<Navigate to="/login" />} />
 
-<Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
-<Route
-          path="/dashboard"
+        <Route
+          path="/home"
           element={
             <ProtectedRoute>
               <Layout />
             </ProtectedRoute>
           }
         >
-    <Route index element={<Home />} />
-    <Route path="/events" element={<Events />} />
-    <Route path="/gallery" element={<Gallery />} />
-    <Route path="/contact" element={<Contact />} />
-  </Route>
-</Routes>
+          <Route index element={<Home />} />
+          <Route path="/home/events" element={<Events />} />
+          <Route path="/home/gallery" element={<Gallery />} />
+          <Route path="/home/contact" element={<Contact />} />
+        </Route>
+
+      </Routes>
     </BrowserRouter>
   )
 }

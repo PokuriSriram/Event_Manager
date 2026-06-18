@@ -9,7 +9,6 @@ const Home = ({name}) => {
             <div className="container">
                 <div className="row align-items-center min-vh-100">
 
-                    {/* Left Section */}
                     <div className="col-lg-6 text-white">
                         <p className="fw-bold fs-3">Hello {name}</p>
                         <p className="fw-bold fs-3">
