@@ -7,7 +7,12 @@
 }
 .login-img {
     flex: 1;
-    background: linear-gradient(135deg, #111111, #2b2b2b);
+    background:linear-gradient(
+        135deg,
+        #45108a 0%,
+        #7b2ff7 50%,
+        #f72585 100%
+    );
     color: white;
     display: flex;
     justify-content: center;
@@ -105,7 +110,12 @@
 .login-btn {
     width: 100%;
     padding: 12px;
-    background: #111;
+    background:linear-gradient(
+        135deg,
+        #45108a 0%,
+        #7b2ff7 50%,
+        #f72585 100%
+    );
     color: white;
     border: none;
     border-radius: 10px;

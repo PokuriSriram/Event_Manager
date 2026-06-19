@@ -42,7 +42,7 @@ const Contact = () => {
         <div className="hero-circle hero-circle-2"></div>
 
         <div className="container position-relative py-5" style={{ zIndex: 2 }}>
-          <p className="breadcrumb-text text-uppercase small mb-3">Home / Contact</p>
+          
           <h1 className="hero-title">
             Get In <span className="text-gradient-pink">Touch</span>
           </h1>
@@ -141,7 +141,7 @@ const Contact = () => {
                         type="text"
                         name="eventCity"
                         className="form-control custom-input"
-                        placeholder="e.g. Delhi, Noida, Gurgaon"
+                        placeholder="e.g. HYD, KURNOOL,BANGALORE"
                         value={formData.eventCity}
                         onChange={handleChange}
                       />

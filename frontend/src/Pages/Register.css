@@ -1,15 +1,18 @@
-/* Main Container */
+
 .register-cont {
     min-height: 100vh;
     display: flex;
     background: #ffffff;
     font-family: 'Segoe UI', sans-serif;
 }
-
-/* Left Side */
 .register-img {
     flex: 1;
-    background: linear-gradient(135deg, #111111, #2b2b2b);
+    background:linear-gradient(
+        135deg,
+        #45108a 0%,
+        #7b2ff7 50%,
+        #f72585 100%
+    );
     color: white;
     display: flex;
     justify-content: center;
@@ -64,7 +67,6 @@
     color: #666;
 }
 
-/* Labels */
 .register-form-label {
     display: block;
     margin-bottom: 6px;
@@ -72,7 +74,6 @@
     color: #222;
 }
 
-/* Inputs */
 .register-input {
     width: 100%;
     padding: 12px 15px;
@@ -89,11 +90,16 @@
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Register Button */
 .register-btn {
     width: 100%;
-    padding: 12px;
-    background: #111;
+    margin-top: 10px;
+    padding: 10px 12px;
+    background:linear-gradient(
+        135deg,
+        #45108a 0%,
+        #7b2ff7 50%,
+        #f72585 100%
+    );
     color: white;
     border: none;
     border-radius: 10px;
@@ -115,7 +121,6 @@
     font-weight: 500;
 }
 
-/* Login Section */
 .register-login {
     text-align: center;
 }
@@ -129,6 +134,7 @@
     background: transparent;
     border: 2px solid #111;
     color: #111;
+    margin: 10px;
     padding: 10px 20px;
     border-radius: 10px;
     font-weight: 600;
