@@ -42,48 +42,82 @@ function Login() {
     }
     return (
         <main>
-            <div className="cont">
-                <div id="img">
-                    <div>
+            <div className="login-cont">
+                <div className="login-img">
+                    <div className="login-img-content">
                         <h1>Welcome Back</h1>
-                        <p>Glad to see you again!.please login to continue your journey</p>
+                        <p>
+                            Glad to see you again! Please login to continue your journey.
+                        </p>
                     </div>
                 </div>
-                <div id="details">
-                    <div className="heading">
-                        <p>Login to your account to continue</p>
-                    </div>
 
-                    <form onSubmit={handleLogin}>
-                        <label className="form-label">Phone:</label>
-                        <br />
-                        <input className="form-control" type="number" placeholder="Enter your number" value={phone} onChange={(e) => setPhone(e.target.value)} />
-                        <br />
-                        <label className="label-form">password</label>
-                        <br />
-                        <input className="form-control" type="password" placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)} />
-                        <br />
-                        <div>
-                            <p>
-                                <input type="checkbox" />
-                                Remember me</p>
-                            <span>Forgot Password?</span>
+                <div className="login-details">
+                    <div className="login-form-container">
+
+                        <div className="login-heading">
+                            <h2>Sign In</h2>
+                            <p>Login to your account to continue</p>
                         </div>
-                        <br />
-                        <button type="submit" id="loginBtn">Login</button>
 
-                        <p className="or">or</p>
+                        <form onSubmit={handleLogin}>
 
-                        <div>
-                            <p>
-                                Don't have an account?
+                            <label className="login-form-label">Phone</label>
+                            <input
+                                className="login-input"
+                                type="number"
+                                placeholder="Enter your number"
+                                value={phone}
+                                onChange={(e) => setPhone(e.target.value)}
+                            />
+
+                            <br />
+                            <br />
+
+                            <label className="login-form-label">Password</label>
+                            <input
+                                className="login-input"
+                                type="password"
+                                placeholder="Enter your password"
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+
+                            <div className="login-options">
+                                <p>
+                                    <input type="checkbox" /> Remember me
+                                </p>
+
+                                <span className="login-forgot">
+                                    Forgot Password?
+                                </span>
+                            </div>
+
+                            <button
+                                type="submit"
+                                className="login-btn"
+                            >
+                                Login
+                            </button>
+
+                            <p className="login-or">OR</p>
+
+                            <div className="login-register">
+                                <p>Don't have an account?</p>
+
                                 <Link to="/register">
-                                    <button>Register</button>
+                                    <button
+                                        type="button"
+                                        className="login-register-btn"
+                                    >
+                                        Register
+                                    </button>
                                 </Link>
-                            </p>
-                        </div>
+                            </div>
 
-                    </form>
+                        </form>
+
+                    </div>
                 </div>
             </div>
         </main>
