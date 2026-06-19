@@ -109,8 +109,36 @@ app.post("/api/login", async (req, res) => {
 });
 
 
-app.post();
+app.post("/api/events", async (req, res) => {
+    try {
+        const { Eventimage, Title, Description } = req.body;
 
+        if (!Eventimage || !Title || !Description) {
+            return res.status(400).json({
+                message: "All fields are required"
+            });
+        }
+
+        const newEvent = new Event({
+            Eventimage,
+            Title,
+            Description,
+        });
+
+        await newEvent.save();
+
+        res.status(201).json({
+            message: "Event added successfully",
+            event: newEvent,
+        });
+
+    } catch (error) {
+        res.status(500).json({
+            message: "Failed to add Event",
+            error: error.message,
+        });
+    }
+});
 
 app.listen(process.env.PORT, () => {
     console.log(`Server running on port ${process.env.PORT}`);
