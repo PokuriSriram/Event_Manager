@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs');
 require("dotenv").config();
 const jwt = require('jsonwebtoken');
 const User = require('./Models/User');
+const Event = require('./Models/Event');
 
 const app = express();
 app.use(cors());
@@ -122,9 +123,12 @@ app.post("/api/events", async (req, res) => {
         const newEvent = new Event({
             Eventimage,
             Title,
-            Description,
+            Description
         });
-
+        console.log("Event:", Event);
+        console.log("typeof Event:", typeof Event);
+        console.log("newEvent:", newEvent);
+        console.log("save:", typeof newEvent.save);
         await newEvent.save();
 
         res.status(201).json({
