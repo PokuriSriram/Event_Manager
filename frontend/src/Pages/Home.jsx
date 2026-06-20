@@ -2,15 +2,17 @@ import React from "react";
 import image from "../assets/images.jpg";
 import { Link } from "react-router-dom";
 import "./Home.css";
-
-const Home = ({name}) => {
+import { useLocation } from "react-router-dom";
+const Home = () => {
+    const location=useLocation();
     return (
         <div className="hero-section">
             <div className="container">
                 <div className="row align-items-center min-vh-100">
 
                     <div className="col-lg-6 text-white">
-                        <p className="fw-bold fs-3">Hello {name}</p>
+                        <p className="fw-bold fs-2 text-white">Hello {location.state?.name}</p>
+
                         <p className="fw-bold fs-3">
                             Kurnool • Ananthapur • Hyderabad • Bangalore
                         </p>

@@ -23,19 +23,23 @@ function Login() {
                 "http://localhost:5000/api/login", userData
             );
             localStorage.setItem("token", response.data.token);
-            localStorage.setItem("user", JSON.stringify(response.data.token));
-            if (response.data.message == "success") {
-                alert("Hello " + response.data.name);
-                setCurUser(response.data.name);
+
+            if (response.data.message == "Login successful") {
+                localStorage.setItem("user", JSON.stringify(response.data.user.fullname));
+                alert("Hello " + response.data.user.fullname);
+                setCurUser(response.data.user.fullname);
             }
-            navigate("/home");
+            navigate("/home",
+                {
+                    state: {
+                        name:response.data.user.fullname
+                    }
+                }
+            );
         } catch (error) {
             console.log("error");
             alert(error.response.data.message);
         }
-    }
-    if (curUser) {
-        return <Home name={curUser} />
     }
     if (show) {
         return <Register />
