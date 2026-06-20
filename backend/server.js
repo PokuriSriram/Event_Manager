@@ -144,6 +144,21 @@ app.post("/api/events", async (req, res) => {
     }
 });
 
+app.get("/api/events", async(req,res) =>{
+    try{
+        const events=await Event.find().sort({createdAt:-1});
+        res.status(200).json(events);
+    }
+    catch(error){
+            res.status(500).json(
+                {
+                    message:"Failed to fetch events",
+                    error:error.message,
+                }
+            );
+    }
+});
+
 app.listen(process.env.PORT, () => {
     console.log(`Server running on port ${process.env.PORT}`);
 })
