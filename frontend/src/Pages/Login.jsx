@@ -6,6 +6,7 @@ import Register from "./Register";
 import Home from "./Home";
 import './login.css'
 import { useNavigate } from "react-router-dom";
+import  {FaPhone,FaLock} from "react-icons/fa";
 function Login() {
     const [curUser, setCurUser] = useState(null);
     const [show, setShow] = useState(false);

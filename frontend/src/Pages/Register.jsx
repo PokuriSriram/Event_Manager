@@ -3,9 +3,9 @@ import axios from "axios";
 import Login from "./Login";
 import "./Register.css";
 import { useNavigate } from "react-router-dom";
-
+import { FaUser, FaEnvelope, FaLock, FaPhone } from "react-icons/fa";
 function Register() {
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     const [login, SetLogin] = useState(false);
     const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
@@ -68,49 +68,54 @@ function Register() {
                         <form onSubmit={handleRegister}>
 
                             <label className="register-form-label">
-                                Full Name
+                                Full Name <FaUser className="input-icon" />
                             </label>
-                            <input
-                                className="register-input"
-                                type="text"
-                                placeholder="Enter your full name"
-                                value={fullName}
-                                onChange={(e) => setFullName(e.target.value)}
-                            />
+                            <div className="input-group">
+                                <input
+                                    className="register-input"
+                                    type="text"
+                                    placeholder="Enter your full name"
+                                    value={fullName}
+                                    onChange={(e) => setFullName(e.target.value)}
+                                />
+                            </div>
 
                             <label className="register-form-label">
-                                Email
+                                Email <FaEnvelope className="input-icon" />
                             </label>
-                            <input
-                                className="register-input"
-                                type="email"
-                                placeholder="Enter your email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
-
+                            <div className="input-group">
+                                <input
+                                    className="register-input"
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                />
+                            </div>
                             <label className="register-form-label">
-                                Password
+                                Password <FaLock className="input-icon" />
                             </label>
-                            <input
-                                className="register-input"
-                                type="password"
-                                placeholder="Enter password"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
-
+                            <div className="input-group">
+                                <input
+                                    className="register-input"
+                                    type="password"
+                                    placeholder="Enter password"
+                                    value={password}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                />
+                            </div>
                             <label className="register-form-label">
-                                Phone Number
+                                Phone Number <FaPhone className="input-icon" />
                             </label>
-                            <input
-                                className="register-input"
-                                type="number"
-                                placeholder="Enter phone number"
-                                value={phone}
-                                onChange={(e) => setPhone(e.target.value)}
-                            />
-
+                            <div className="input-group">
+                                <input
+                                    className="register-input"
+                                    type="number"
+                                    placeholder="Enter phone number"
+                                    value={phone}
+                                    onChange={(e) => setPhone(e.target.value)}
+                                />
+                            </div>
                             <button
                                 type="submit"
                                 className="register-btn"
