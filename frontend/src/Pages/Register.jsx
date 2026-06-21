@@ -4,6 +4,7 @@ import Login from "./Login";
 import "./Register.css";
 import { useNavigate } from "react-router-dom";
 import { FaUser, FaEnvelope, FaLock, FaPhone } from "react-icons/fa";
+import { toast } from "react-toastify";
 function Register() {
     const navigate = useNavigate();
     const [login, SetLogin] = useState(false);
@@ -36,7 +37,7 @@ function Register() {
             setPhone("");
             navigate("/login");
         } catch (error) {
-            alert(error.response.data.message);
+            toast.error(error.response.data.message);
         }
     };
 

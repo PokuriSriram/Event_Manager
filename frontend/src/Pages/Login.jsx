@@ -7,6 +7,7 @@ import Home from "./Home";
 import './login.css'
 import { useNavigate } from "react-router-dom";
 import  {FaPhone,FaLock} from "react-icons/fa";
+import { toast } from "react-toastify";
 function Login() {
     const [curUser, setCurUser] = useState(null);
     const [show, setShow] = useState(false);
@@ -27,7 +28,7 @@ function Login() {
 
             if (response.data.message == "Login successful") {
                 localStorage.setItem("user", JSON.stringify(response.data.user.fullname));
-                alert("Hello " + response.data.user.fullname);
+                toast.success("Hello " + response.data.user.fullname);
                 setCurUser(response.data.user.fullname);
             }
             navigate("/home",
@@ -39,7 +40,7 @@ function Login() {
             );
         } catch (error) {
             console.log("error");
-            alert(error.response.data.message);
+            toast.error(error.response.data.message);
         }
     }
     if (show) {

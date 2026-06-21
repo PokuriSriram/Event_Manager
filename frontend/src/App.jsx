@@ -1,5 +1,7 @@
 import React, { use } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Events from './Pages/Events';
@@ -10,6 +12,8 @@ import Register from './Pages/Register';
 import ProtectedRoute from './components/ProtectedRoute';
 const App = () => {
   return (
+    <>
+    <ToastContainer />
     <BrowserRouter>
       <Routes>
 
@@ -34,6 +38,7 @@ const App = () => {
 
       </Routes>
     </BrowserRouter>
+    </>
   )
 }
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import EventCard from "../components/EventCard";
+import { toast } from "react-toastify";
 const Events = () => {
   const [Eventimage, setEventImg] = useState("");
   const [Title, setTitle] = useState("");
@@ -15,7 +16,7 @@ const Events = () => {
       );
       setEvents(response.data);
     } catch (error) {
-      alert("No data found");
+      toast.error("No data found");
       console.error(error);
     }
   }
@@ -40,7 +41,7 @@ const Events = () => {
           eventData
         );
 
-        alert(response.data.message);
+        toast(response.data.message);
         setEditId(null);
       } else {
         const response = await axios.post(
@@ -48,7 +49,7 @@ const Events = () => {
           eventData
         );
 
-        alert(response.data.message);
+        toast(response.data.message);
       }
 
       setEventImg("");
