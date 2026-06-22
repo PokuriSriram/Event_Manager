@@ -85,10 +85,10 @@ const Events = () => {
         `http://localhost:5000/api/events/${id}`
       );
 
-      alert(response.data.message);
+      toast(response.data.message);
       fetchEvents();
     } catch (error) {
-      alert("Failed to delete event");
+      toast.error("Failed to delete event");
       console.error(error);
     }
   };
