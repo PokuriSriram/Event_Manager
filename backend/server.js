@@ -9,7 +9,18 @@ const User = require('./Models/User');
 const Event = require('./Models/Event');
 
 const app = express();
-app.use(cors());
+
+const cors = require("cors");
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173", // local development
+      "https://event-manager-pi-six.vercel.app/login", // your Vercel frontend URL
+    ],
+    credentials: true,
+  })
+);
 
 app.use(express.json());
 
