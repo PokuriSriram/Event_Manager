@@ -32,7 +32,7 @@ function Register() {
                 userData
             );
 
-            alert(response.data.message);
+            toast(response.data.message);
 
             setFullName("");
             setEmail("");
