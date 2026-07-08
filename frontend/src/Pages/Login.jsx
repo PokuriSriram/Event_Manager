@@ -91,15 +91,7 @@ function Login() {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
 
-                            <div className="login-options">
-                                <p>
-                                    <input type="checkbox" /> Remember me
-                                </p>
-
-                                <span className="login-forgot">
-                                    Forgot Password?
-                                </span>
-                            </div>
+                           
 
                             <button
                                 type="submit"
